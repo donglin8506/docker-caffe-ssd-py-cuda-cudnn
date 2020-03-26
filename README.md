@@ -93,3 +93,17 @@ pip install scikit-image
 pip install --upgrade 'setuptools<45.0.0'
 pip install scikit-image
 ```
+
+3）fatal error: caffe/proto/caffe.pb.h: No such file or directory #include "caffe/proto/caffe.pb.h
+
+在caffe的安装目录下运行下面命令：
+
+```
+protoc src/caffe/proto/caffe.proto --cpp_out=.
+
+mkdir include/caffe/proto
+
+mv src/caffe/proto/caffe.pb.h include/caffe/proto
+```
+
+
